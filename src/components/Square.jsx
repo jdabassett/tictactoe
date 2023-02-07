@@ -5,8 +5,9 @@ export default class Square extends React.Component {
     return (
       <button 
         className="square"
+        onClick={()=>(this.props.toggleTurn(this.props.id,this.props.mark))}
         >
-        {/* TODO */}
+        {this.props.value}
       </button>
     );
   }

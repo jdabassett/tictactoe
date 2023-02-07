@@ -1,18 +1,85 @@
+body {
+  font: 14px "Centery Gothic", Futura, sans-serif;
+  margin:20px;
+}
+
+ol,ul {
+  padding-left:30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
 
 
 
-/* 
-Game.js
+
+/* Game.js
 .game-container
 .board-container
-.info-container 
+.info-container  */
 
-Board.jsx
-.
+.game-container {
+  display:flex;
+  flex-direction:row;
+}
+
+.info-container {
+  margin-left:20px;
+}
+
+/* Board.jsx
+.status-container
+.squares-container */
+
+.status-container {
+  margin-bottom:10px;
+}
+
+.squares-container {
+  display:grid;
+  grid-template-columns:repeat(3,34px);
+  grid-template-rows:repeat(3,34px);
+  grid-column-gap:0px;
+  grid-row-gap:0px;
+}
 
 
-Square.jsx
-.square
-*/
+/* Square.jsx
+.square */
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square:hover {
+  cursor:pointer;
+}
+
+.square:active {
+  background-color:gray;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
 
 
